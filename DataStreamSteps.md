@@ -103,7 +103,20 @@ gcloud alloydb instances update $ALLOYDB_INSTANCE_ID \
 
 
 ```bash
-gcloud compute instances create-with-container   --zone=us-east4-c ds-tcp-proxy   --container-image gcr.io/dms-images/tcp-proxy   --tags=ds-tcp-proxy   --container-env=SOURCE_CONFIG=10.24.240.2:5432   --can-ip-forward   --network=default   --machine-type=e2-micro
+gcloud compute instances create-with-container \
+  --zone=us-east4-c ds-tcp-proxy \
+  --container-image gcr.io/dms-images/tcp-proxy \
+  --tags=ds-tcp-proxy \
+  --container-env=SOURCE_CONFIG=10.24.240.2:5432 \
+  --can-ip-forward \
+  --network=default \
+  --machine-type=e2-micro
+  --metadata=startup-script='#! /bin/bash
+  mkdir -p /etc/docker
+  cat <<EOF > /etc/docker/daemon.json
+  {"bridge":"none"}
+  EOF
+  systemctl restart docker'
 
 gcloud compute firewall-rules create ds-proxy1 \
   --direction=INGRESS \
