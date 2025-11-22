@@ -1,0 +1,16 @@
+  {
+    "includeObjects": {
+      "postgresqlSchemas": [
+        {
+          "schema": "public",
+          "postgresqlTables": [
+            {
+              "table": "orders"
+            }
+          ]
+        }
+      ]
+    },
+    "replicationSlot": "dev_slot",
+    "publication": "dev_publication"
+  }

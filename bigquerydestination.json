@@ -1,0 +1,9 @@
+{
+  "sourceHierarchyDatasets": {
+    "datasetTemplate": {
+      "location": "us-east4"
+    }
+  },
+  "merge": {},
+  "dataFreshness": "60s"
+}
