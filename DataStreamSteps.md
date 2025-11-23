@@ -191,19 +191,20 @@ Connection profiles store the connection information for your source and destina
     export DB_USER="datastream_user"
     export DB_PASSWORD="your-strong-password" # Consider using Secret Manager for production
 
-   gcloud datastream connection-profiles create alloydb-connection-profile \
-  --location=us-east4 \
-  --type=postgresql \
-  --display-name="PostgreSQL Source via Private Connection" \
-  --postgresql-hostname=10.150.0.3 \
-  --postgresql-port=5432 \
-  --postgresql-username=postgres \
-  --postgresql-password=postgres \
-  --postgresql-database=postgres \
-  --private-connection=projects/gcp-poc-data-dev/locations/us-east4/privateConnections/alloydb-private-connection
-    ```
+       gcloud datastream connection-profiles create alloydb-connection-profile \
+      --location=us-east4 \
+      --type=postgresql \
+      --display-name="PostgreSQL Source via Private Connection" \
+      --postgresql-hostname=10.150.0.3 \
+      --postgresql-port=5432 \
+      --postgresql-username=postgres \
+      --postgresql-password=postgres \
+      --postgresql-database=postgres \
+      --private-connection=projects/gcp-poc-data-dev/locations/us-east4/privateConnections/alloydb-private-connection
 
-2.  **Create the BigQuery Destination Connection Profile:**
+  ```
+
+3.  **Create the BigQuery Destination Connection Profile:**
 
     ```bash
     export BQ_DEST_PROFILE="bigquery-dest-profile"
