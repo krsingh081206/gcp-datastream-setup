@@ -1,6 +1,6 @@
 # Stream Data from AlloyDB to BigQuery using DataStream
 
-This guide provides step-by-step instructions to set up a data streaming pipeline from an AlloyDB for PostgreSQL database to a BigQuery dataset using GCP DataStream. All steps are performed using the `gcloud` command-line tool.
+This guide shall provide step-by-step instructions to set up a data streaming pipeline from an AlloyDB for PostgreSQL database to a BigQuery dataset using GCP DataStream. All steps are performed using the `gcloud` command-line tool.
 
 ## 1. Prerequisite IAM Permissions
 
