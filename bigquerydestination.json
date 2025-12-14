@@ -5,5 +5,5 @@
     }
   },
   "merge": {},
-  "dataFreshness": "60s"
+  "dataFreshness": "120s"
 }
